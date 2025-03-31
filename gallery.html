@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery - Captured Moments</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+     <!-- Font Preload -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- CSS Resources -->
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery-js/1.4.0/css/lightgallery.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Cormorant+Garamond:wght@400;700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style type="text/css">
+     body {
+            font-family: 'Montserrat', sans-serif;
+            scroll-behavior: smooth;
+        }
+        
+        /* ===== Typography ===== */
+        .font-wedding {
+            font-family: 'Alex Brush', cursive;
+        }
+        .font-subtitle {
+            font-family: 'Cormorant Garamond', serif;
+        }
+        
+</style>
+    
+</head>
+<body class="bg-gray-100 text-gray-900">
+
+    <!-- Navbar (Same as Your Website) -->
+   <nav class="fixed w-full bg-white shadow-sm z-50">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <a href="#" class="text-3xl font-wedding text-gray-800">Eternal Vows</a>
+                <div class="hidden md:flex space-x-8">
+                    <a href="index.html" class="hover:text-amber-600 transition">Home</a>
+                    <a href="about.html" class="hover:text-amber-600 transition">About Us</a>
+                    <a href="gallery.html" class="hover:text-amber-600 transition">Gallery</a>
+                    <a href="films.html" class="hover:text-amber-600 transition">Films</a>
+                    <a href="#pricing" class="hover:text-amber-600 transition">Collections</a>
+                    <a href="contact.html" class="hover:text-amber-600 transition">Contact</a>
+                </div>
+                <button id="menu-toggle" class="md:hidden focus:outline-none">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+                <!-- Mobile Menu Toggle -->
+                <div id="mobile-menu" class="hidden md:hidden mt-4 space-y-2">
+                <a href="#home" class="block py-2 hover:text-amber-600">Home</a>
+                <a href="#about" class="block py-2 hover:text-amber-600">Our Story</a>
+                <a href="#gallery" class="block py-2 hover:text-amber-600">Gallery</a>
+                <a href="#pricing" class="block py-2 hover:text-amber-600">Collections</a>
+                <a href="#contact" class="block py-2 hover:text-amber-600">Contact</a>
+            </div>
+        </div>
+
+    </nav>
+
+    <!-- Hero Section -->
+     <header class="relative text-center py-24 bg-cover bg-center" style="background-image: url('images/about-hero.jpg');">
+        <div class="absolute inset-0 bg-black opacity-50"></div> <!-- Dark Overlay -->
+        <div class="relative z-10">
+            <h1 class="text-5xl font-wedding  text-white">Our Gallery</h1>
+            <p class="text-lg text-gray-300 mt-2 max-w-2xl mx-auto">
+                Capturing love, emotions, and unforgettable moments – this is what we do.
+            </p>
+        </div>
+    </header>
+
+    <!-- Gallery Section -->
+    <section class="container mx-auto px-4 py-12">
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+            <!-- Image List (Replace with Your Actual Images) -->
+            <img src="https://cdn.pixabay.com/photo/2021/08/11/17/03/bride-6538982_1280.jpg" class="w-full h-auto rounded-lg shadow-md cursor-pointer">
+            <img src="https://cdn.pixabay.com/photo/2020/08/14/21/11/bride-5489099_960_720.jpg" class="w-full h-auto rounded-lg shadow-md cursor-pointer">
+            <img src="https://cdn.pixabay.com/photo/2021/07/06/14/24/bride-6391756_960_720.jpg" class="w-full h-auto rounded-lg shadow-md cursor-pointer">
+            <img src="https://cdn.pixabay.com/photo/2020/09/11/10/21/wedding-photography-5562735_960_720.jpg" class="w-full h-auto rounded-lg shadow-md cursor-pointer">
+            <img src="https://cdn.pixabay.com/photo/2014/09/13/04/59/couple-443600_960_720.jpg" class="w-full h-auto rounded-lg shadow-md cursor-pointer">
+            <img src="https://cdn.pixabay.com/photo/2021/08/03/21/28/bride-6520554_1280.jpg" class="w-full h-auto rounded-lg shadow-md cursor-pointer">
+            <img src="https://cdn.pixabay.com/photo/2016/03/14/14/21/bride-1255520_1280.jpg" class="w-full h-auto rounded-lg shadow-md cursor-pointer">
+            <img src="https://cdn.pixabay.com/photo/2023/08/08/09/21/couple-8176869_1280.jpg" class="w-full h-auto rounded-lg shadow-md cursor-pointer">
+            <img src="https://cdn.pixabay.com/photo/2017/08/01/15/23/bride-2566244_960_720.jpg" class="w-full h-auto rounded-lg shadow-md cursor-pointer">
+            
+        </div>
+    </section>
+
+    <!-- Footer (Same as Your Website) -->
+    <footer class="bg-gray-800 text-gray-300 py-16">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12">
+                <div>
+                    <h3 class="font-wedding text-white text-3xl mb-4">Eternal Vows</h3>
+                    <p class="mb-6">Preserving the poetry of your love story since 2012</p>
+                    <div class="flex space-x-4 mb-6">
+                        <a href="#" class="hover:text-amber-400 transition text-xl"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="hover:text-amber-400 transition text-xl"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="hover:text-amber-400 transition text-xl"><i class="fab fa-pinterest"></i></a>
+                        <a href="#" class="hover:text-amber-400 transition text-xl"><i class="fab fa-youtube"></i></a>
+                    </div>
+                    <div class="flex items-center mb-2">
+                        <i class="fas fa-envelope mr-3 text-amber-400"></i>
+                        <span>contact@eternalweddings.com</span>
+                    </div>
+                    <div class="flex items-center">
+                        <i class="fas fa-phone-alt mr-3 text-amber-400"></i>
+                        <span>+1 (555) 123-4567</span>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="font-subtitle text-white text-xl mb-4 border-b border-amber-500 pb-2 inline-block">Quick Links</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#home" class="hover:text-amber-400 transition">Home</a></li>
+                        <li><a href="#gallery" class="hover:text-amber-400 transition">Gallery</a></li>
+                        <li><a href="#films" class="hover:text-amber-400 transition">Wedding Films</a></li>
+                        <li><a href="#pricing" class="hover:text-amber-400 transition">Packages</a></li>
+                        <li><a href="#booking" class="hover:text-amber-400 transition">Book a Session</a></li>
+                        <li><a href="#process" class="hover:text-amber-400 transition">Our Process</a></li>
+                    </ul>
+                </div>
+
+                <!-- Services -->
+                <div>
+                    <h4 class="font-subtitle text-white text-xl mb-4 border-b border-amber-500 pb-2 inline-block">Our Services</h4>
+                    <ul class="space-y-3">
+                        <li class="flex items-start">
+                            <i class="fas fa-camera text-amber-400 mt-1 mr-2 text-sm"></i>
+                            <span>Wedding Photography</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-video text-amber-400 mt-1 mr-2 text-sm"></i>
+                            <span>Wedding Videography</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-ring text-amber-400 mt-1 mr-2 text-sm"></i>
+                            <span>Engagement Sessions</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-baby text-amber-400 mt-1 mr-2 text-sm"></i>
+                            <span>Maternity Sessions</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-book text-amber-400 mt-1 mr-2 text-sm"></i>
+                            <span>Custom Wedding Albums</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Newsletter -->
+                <div>
+                   
+                    <div class="mt-6">
+                        <h5 class="font-medium mb-2">Business Hours</h5>
+                        <p class="text-sm">Monday - Friday: 9am - 6pm</p>
+                        <p class="text-sm">Saturday: 10am - 4pm</p>
+                        <p class="text-sm">Sunday: Closed</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Copyright & Legal -->
+            <div class="border-t border-gray-700 mt-12 pt-8">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <p>&copy; <script>document.write(new Date().getFullYear())</script> Eternal Weddings. All rights reserved.</p>
+                    <div class="flex space-x-6 mt-4 md:mt-0">
+                        <a href="#" class="hover:text-amber-400 transition text-sm">Privacy Policy</a>
+                        <a href="#" class="hover:text-amber-400 transition text-sm">Terms of Service</a>
+                        <a href="#" class="hover:text-amber-400 transition text-sm">FAQ</a>
+                    </div>
+                </div>
+                <p class="text-center mt-4 text-sm text-gray-500">
+                    Based in Nashik | Serving Tri-State Area & Destination Weddings
+                </p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

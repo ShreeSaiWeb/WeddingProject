@@ -1,0 +1,803 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Meta Tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eternal Weddings | Premium Photography</title>
+    <meta name="description" content="Professional wedding photography and videography services capturing timeless memories">
+
+    <!-- Font Preload -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- CSS Resources -->
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery-js/1.4.0/css/lightgallery.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Cormorant+Garamond:wght@400;700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Custom Styles -->
+    <style>
+        
+
+        /* ===== Base Styles ===== */
+        body {
+            font-family: 'Montserrat', sans-serif;
+            scroll-behavior: smooth;
+        }
+        
+        /* ===== Typography ===== */
+        .font-wedding {
+            font-family: 'Alex Brush', cursive;
+        }
+        .font-subtitle {
+            font-family: 'Cormorant Garamond', serif;
+        }
+        
+        /* ===== Hero Video ===== */
+         .video-container {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        overflow: hidden;
+        z-index: -1;
+    }
+    
+    #yt-background iframe {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 100vw;
+        height: 100vh;
+        transform: translate(-50%, -50%);
+        z-index: -1;
+        /* Ensure video covers entire screen */
+        min-width: 100%;
+        min-height: 100%;
+        object-fit: cover;
+    }
+    
+    /* Remove default body margins */
+    body {
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+    }
+    
+    /* Ensure hero section has no gaps */
+    #home {
+        margin: 0;
+        padding: 0;
+    }
+        
+     
+        
+        /* ===== Footer ===== */
+        footer {
+            background-color: #1f2937; /* gray-800 */
+            background-image: 
+                radial-gradient(at top left, rgba(180, 83, 9, 0.1) 0%, transparent 50%),
+                radial-gradient(at bottom right, rgba(180, 83, 9, 0.1) 0%, transparent 50%);
+        }
+    </style>
+</head>
+<body class="bg-white text-gray-800">
+    <!-- ==================== -->
+    <!-- Navigation Section -->
+    <!-- ==================== -->
+    <nav class="fixed w-full bg-white shadow-sm z-50">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <a href="#" class="text-3xl font-wedding text-gray-800">Eternal Vows</a>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#home" class="hover:text-amber-600 transition">Home</a>
+                    <a href="about.html" class="hover:text-amber-600 transition">About Us</a>
+                    <a href="gallery.html" class="hover:text-amber-600 transition">Gallery</a>
+                    <a href="#films" class="hover:text-amber-600 transition">Films</a>
+                    <a href="#pricing" class="hover:text-amber-600 transition">Collections</a>
+                    <a href="#contact" class="hover:text-amber-600 transition">Contact</a>
+                </div>
+                <button id="menu-toggle" class="md:hidden focus:outline-none">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+                <!-- Mobile Menu Toggle -->
+                <div id="mobile-menu" class="hidden md:hidden mt-4 space-y-2">
+                <a href="#home" class="block py-2 hover:text-amber-600">Home</a>
+                <a href="#about" class="block py-2 hover:text-amber-600">Our Story</a>
+                <a href="#gallery" class="block py-2 hover:text-amber-600">Gallery</a>
+                <a href="#pricing" class="block py-2 hover:text-amber-600">Collections</a>
+                <a href="#contact" class="block py-2 hover:text-amber-600">Contact</a>
+            </div>
+        </div>
+
+    </nav>
+
+    <!-- ==================== -->
+    <!-- Hero Section -->
+    <!-- ==================== -->
+<section id="home" class=" relative w-full h-screen overflow-hidden">
+  <!-- YouTube Video Background -->
+  <div class="absolute top-0 left-0 w-full h-full">
+    <div class="absolute top-0 left-0 w-full h-full">
+      <iframe class="absolute top-1/2 left-1/2 w-[120%] h-[120%] transform -translate-x-1/2 -translate-y-1/2" 
+              src="https://www.youtube.com/embed/Kni0Nd76X5A?autoplay=1&mute=1&loop=1&playlist=Kni0Nd76X5A&controls=0&showinfo=0&modestbranding=1"
+              frameborder="0"
+              allow="autoplay; fullscreen"
+              allowfullscreen>
+      </iframe>
+    </div>
+  </div>
+
+  <!-- Themed Overlay -->
+  <div class="absolute top-0 left-0 w-full h-full bg-black bg-opacity-50"></div>
+
+  <!-- Content -->
+  <div class="relative z-10 flex flex-col items-center justify-center h-full text-white text-center px-6">
+    <h1 class="text-5xl md:text-6xl font-wedding font-bold mb-6 leading-tight text-white">
+      Timeless Memories, Perfectly Captured
+    </h1>
+    <p class="text-lg md:text-xl font-subtitle mb-8 text-white max-w-2xl">
+      Cinematic Wedding Photography & Videography
+    </p>
+
+    <!-- Call to Action Button -->
+    <a href="tel:7020813427" 
+   class="bg-[#E63946] hover:bg-[#C92C3A] text-white py-4 px-10 rounded-full text-xl shadow-lg transition-all font-playfair">
+  Book Appointment
+</a>
+
+  </div>
+</section>
+
+
+
+
+
+
+      <!-- ==================== -->
+    <!-- About Us Section -->
+    <!-- ==================== -->
+   <section id="about" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col lg:flex-row items-center gap-12">
+                <div class="lg:w-1/2">
+                    <div class="relative overflow-hidden rounded-xl shadow-xl">
+                        <img src="https://images.unsplash.com/photo-1523438885200-e635ba2c371e" 
+                             alt="Eternal Vows photography team" 
+                             class="w-full h-auto object-cover transition-transform duration-500 hover:scale-105"
+                             loading="lazy">
+                    </div>
+                </div>
+                <div class="lg:w-1/2">
+                    <h2 class="font-wedding text-4xl md:text-5xl mb-6">Crafting Memories Since 2012</h2>
+                    <p class="font-subtitle text-gray-600 text-xl mb-6">
+                        Where every frame tells a story and every moment becomes eternal.
+                    </p>
+                    <p class="mb-6">
+                        At Eternal Vows, we don't just take photographs - we curate heirlooms. Our award-winning team 
+                        specializes in capturing the unspoken emotions, the stolen glances, and the grand celebrations 
+                        that make your wedding uniquely yours. With a blend of traditional artistry and contemporary 
+                        vision, we transform fleeting moments into lifelong treasures.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <a href="#contact" class="bg-amber-600 text-white px-8 py-3 rounded-full font-medium hover:bg-amber-700 transition text-center">
+                            Consult Our Artists
+                        </a>
+                        <a href="tel:7020813427" class="border-2 border-amber-600 text-amber-600 px-8 py-3 rounded-full font-medium hover:bg-amber-50 transition text-center">
+                            <i class="fas fa-phone mr-2"></i> Contact Us
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ==================== -->
+    <!-- Gallery Section -->
+    <!-- ==================== -->
+      <!-- Modern Gallery Section -->
+
+      <section id="gallery" class="py-10 bg-white">
+  <div class="container mx-auto px-4 text-center">
+    <h2 class="text-4xl font-wedding mb-6">Photo Gallery</h2>
+    <p class="text-lg font-subtitle mb-8">Capturing timeless moments.</p>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+      <!-- Replace 'imageX.jpg' with actual image paths -->
+      <a href="https://plus.unsplash.com/premium_photo-1690148812608-9942834931a1?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="group block overflow-hidden rounded-lg shadow-lg">
+        <img src="https://plus.unsplash.com/premium_photo-1690148812608-9942834931a1?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="w-full h-[250px] object-cover transition-transform duration-300 group-hover:scale-105">
+      </a>
+      <a href="https://images.unsplash.com/photo-1543932927-a9def13a0e7c?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="group block overflow-hidden rounded-lg shadow-lg">
+        <img src="https://images.unsplash.com/photo-1543932927-a9def13a0e7c?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="w-full h-[250px] object-cover transition-transform duration-300 group-hover:scale-105">
+      </a>
+      <a href="https://img.freepik.com/premium-photo/man-woman-are-looking-each-other-woman-is-wearing-sari_1113980-2258.jpg?w=740" class="group block overflow-hidden rounded-lg shadow-lg">
+        <img src="https://img.freepik.com/premium-photo/man-woman-are-looking-each-other-woman-is-wearing-sari_1113980-2258.jpg?w=740" class="w-full h-[250px] object-cover transition-transform duration-300 group-hover:scale-105">
+      </a>
+      <!-- Repeat for 20 images -->
+
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+    <!-- ==================== -->
+    <!-- Films Section -->
+    <!-- ==================== -->
+
+
+    <section id="films" class="py-10 bg-gray-100">
+  <div class="container mx-auto px-4 text-center">
+    <h2 class="text-4xl font-wedding mb-6">Our Wedding Films</h2>
+    <p class="text-lg font-subtitle mb-8">A glimpse of love stories we've captured.</p>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <iframe class="w-full aspect-video rounded-lg shadow-lg" src="https://www.youtube.com/embed/FZLadzn5i6Q?si=b4WkGergGM_mlvSr" allowfullscreen></iframe>
+      <iframe class="w-full aspect-video rounded-lg shadow-lg" src="https://www.youtube.com/embed/dx4Teh-nv3A?si=THz1SHwBt_BPlbUM" allowfullscreen></iframe>
+      <iframe class="w-full aspect-video rounded-lg shadow-lg" src="https://www.youtube.com/embed/ZsZxyyEmGlk?si=yBqS8ZPp1_4lxqGk" allowfullscreen></iframe>
+      <iframe class="w-full aspect-video rounded-lg shadow-lg" src="https://www.youtube.com/embed/WcMc8FKdtwQ?si=kNhKO1r7rRoFIChC" allowfullscreen></iframe>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+    <!-- ==================== -->
+    <!-- Process Section -->
+    <!-- ==================== -->
+    <section id="process" class="py-20 bg-gray-100">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="font-wedding text-4xl md:text-5xl mb-4">Our Process</h2>
+                <p class="font-subtitle text-gray-600 max-w-2xl mx-auto">
+                    From first meeting to delivering your memories
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-5 gap-8">
+                <!-- Consultation Step -->
+                <div class="bg-white p-8 rounded-lg shadow-md text-center hover:shadow-lg transition hover:-translate-y-2">
+                    <div class="w-16 h-16 mx-auto mb-6 bg-amber-50 rounded-full flex items-center justify-center text-amber-600">
+                        <i class="fas fa-glass-cheers text-2xl"></i>
+                    </div>
+                    <h3 class="font-wedding text-2xl mb-3">1. Consultation</h3>
+                    <p class="text-gray-600">We meet to discuss your vision, timeline, and special requests</p>
+                </div>
+                
+                <!-- Booking Step -->
+                <div class="bg-white p-8 rounded-lg shadow-md text-center hover:shadow-lg transition hover:-translate-y-2">
+                    <div class="w-16 h-16 mx-auto mb-6 bg-amber-50 rounded-full flex items-center justify-center text-amber-600">
+                        <i class="fas fa-calendar-check text-2xl"></i>
+                    </div>
+                    <h3 class="font-wedding text-2xl mb-3">2. Booking</h3>
+                    <p class="text-gray-600">Secure your date with a signed contract and retainer</p>
+                </div>
+                
+                <!-- Wedding Day Step -->
+                <div class="bg-white p-8 rounded-lg shadow-md text-center hover:shadow-lg transition hover:-translate-y-2">
+                    <div class="w-16 h-16 mx-auto mb-6 bg-amber-50 rounded-full flex items-center justify-center text-amber-600">
+                        <i class="fas fa-camera text-2xl"></i>
+                    </div>
+                    <h3 class="font-wedding text-2xl mb-3">3. Wedding Day</h3>
+                    <p class="text-gray-600">We capture every moment with artistic precision</p>
+                </div>
+                
+                <!-- Editing Step -->
+                <div class="bg-white p-8 rounded-lg shadow-md text-center hover:shadow-lg transition hover:-translate-y-2">
+                    <div class="w-16 h-16 mx-auto mb-6 bg-amber-50 rounded-full flex items-center justify-center text-amber-600">
+                        <i class="fas fa-magic text-2xl"></i>
+                    </div>
+                    <h3 class="font-wedding text-2xl mb-3">4. Editing</h3>
+                    <p class="text-gray-600">Careful selection and artistic post-processing</p>
+                </div>
+                
+                <!-- Delivery Step -->
+                <div class="bg-white p-8 rounded-lg shadow-md text-center hover:shadow-lg transition hover:-translate-y-2">
+                    <div class="w-16 h-16 mx-auto mb-6 bg-amber-50 rounded-full flex items-center justify-center text-amber-600">
+                        <i class="fas fa-box-open text-2xl"></i>
+                    </div>
+                    <h3 class="font-wedding text-2xl mb-3">5. Delivery</h3>
+                    <p class="text-gray-600">Receive your digital gallery within 4-6 weeks</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== -->
+    <!-- Pricing Section -->
+    <!-- ==================== -->
+     <section id="pricing" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="font-wedding text-4xl md:text-5xl mb-4">Our Signature Collections</h2>
+                <p class="font-subtitle text-gray-600 max-w-2xl mx-auto">
+                    Tailored experiences for your celebration
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 max-w-5xl mx-auto">
+                <!-- Royal Heritage Collection -->
+                <div class="bg-white p-8 rounded-lg shadow-lg border-2 border-amber-500 relative hover:-translate-y-2 transition">
+                    <div class="absolute top-0 right-0 bg-amber-500 text-white px-3 py-1 text-sm font-medium">Most Popular</div>
+                    <h3 class="font-wedding text-3xl mb-4 text-center">Royal Heritage</h3>
+                    <p class="text-amber-600 text-2xl font-medium text-center mb-6">₹1,25,000</p>
+                    <ul class="space-y-3 text-gray-600">
+                        <li class="flex items-start"><i class="fas fa-check text-amber-500 mt-1 mr-2"></i> Full wedding day coverage (12 hours)</li>
+                        <li class="flex items-start"><i class="fas fa-check text-amber-500 mt-1 mr-2"></i> Two professional photographers</li>
+                        <li class="flex items-start"><i class="fas fa-check text-amber-500 mt-1 mr-2"></i> Traditional & contemporary poses</li>
+                        <li class="flex items-start"><i class="fas fa-check text-amber-500 mt-1 mr-2"></i> 800+ high-resolution edited images</li>
+                        <li class="flex items-start"><i class="fas fa-check text-amber-500 mt-1 mr-2"></i> Pre-wedding consultation</li>
+                        <li class="flex items-start"><i class="fas fa-check text-amber-500 mt-1 mr-2"></i> Online gallery with download rights</li>
+                        <li class="flex items-start"><i class="fas fa-check text-amber-500 mt-1 mr-2"></i> 20 premium prints (8x12)</li>
+                        <li class="flex items-start"><i class="fas fa-check text-amber-500 mt-1 mr-2"></i> 1 cinematic highlight film (3-5 mins)</li>
+                    </ul>
+                    <a href="#contact" class="mt-6 block w-full bg-amber-600 text-white py-2 px-4 rounded text-center hover:bg-amber-700 transition">
+                        Enquire Now
+                    </a>
+                </div>
+                
+                <!-- Eternal Bliss Collection -->
+                <div class="bg-white p-8 rounded-lg shadow-lg border-2 border-gray-200 hover:border-amber-500 relative hover:-translate-y-2 transition">
+                    <h3 class="font-wedding text-3xl mb-4 text-center">Eternal Bliss</h3>
+                    <p class="text-amber-600 text-2xl font-medium text-center mb-6">₹2,25,000</p>
+                    <ul class="space-y-3 text-gray-600">
+                        <li class="flex items-start"><i class="fas fa-check text-amber-500 mt-1 mr-2"></i> Complete multi-day coverage (3 events)</li>
+                        <li class="flex items-start"><i class="fas fa-check text-amber-500 mt-1 mr-2"></i> Lead photographer + two associates</li>
+                        <li class="flex items-start"><i class="fas fa-check text-amber-500 mt-1 mr-2"></i> Candid & traditional coverage</li>
+                        <li class="flex items-start"><i class="fas fa-check text-amber-500 mt-1 mr-2"></i> 1500+ artistically edited images</li>
+                        <li class="flex items-start"><i class="fas fa-check text-amber-500 mt-1 mr-2"></i> Pre-wedding portrait session</li>
+                        <li class="flex items-start"><i class="fas fa-check text-amber-500 mt-1 mr-2"></i> Luxury leather-bound album (40 pages)</li>
+                        <li class="flex items-start"><i class="fas fa-check text-amber-500 mt-1 mr-2"></i> 30 premium prints (various sizes)</li>
+                        <li class="flex items-start"><i class="fas fa-check text-amber-500 mt-1 mr-2"></i> 2 cinematic films (5-7 mins each)</li>
+                        <li class="flex items-start"><i class="fas fa-check text-amber-500 mt-1 mr-2"></i> Drone coverage for grand venues</li>
+                        <li class="flex items-start"><i class="fas fa-check text-amber-500 mt-1 mr-2"></i> Priority editing & delivery</li>
+                    </ul>
+                    <a href="#contact" class="mt-6 block w-full bg-amber-600 text-white py-2 px-4 rounded text-center hover:bg-amber-700 transition">
+                        Enquire Now
+                    </a>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <p class="text-gray-600 mb-6">Custom collections available for destination weddings</p>
+                <a href="#contact" class="inline-block border-2 border-amber-600 text-amber-600 px-6 py-2 rounded-full font-medium hover:bg-amber-50 transition">
+                    Request Custom Proposal
+                </a>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ==================== -->
+    <!-- Booking Section -->
+    <!-- ==================== -->
+    <section id="booking" class="py-20 bg-white">
+        <div class="container mx-auto px-6 max-w-4xl">
+            <div class="text-center mb-16">
+                <h2 class="font-wedding text-4xl md:text-5xl mb-4">Book Your Date</h2>
+                <p class="font-subtitle text-gray-600 max-w-2xl mx-auto">
+                    Secure your wedding photography experience
+                </p>
+            </div>
+
+            <form id="booking-form" class="bg-gray-50 p-8 rounded-lg shadow-md">
+                <!-- Name & Email -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                    <div>
+                        <label for="name" class="block text-gray-700 mb-2">Full Name*</label>
+                        <input type="text" id="name" name="name" required 
+                               class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-amber-500">
+                    </div>
+                    <div>
+                        <label for="email" class="block text-gray-700 mb-2">Email*</label>
+                        <input type="email" id="email" name="email" required 
+                               class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-amber-500">
+                    </div>
+                </div>
+
+                <!-- Phone & Date -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                    <div>
+                        <label for="phone" class="block text-gray-700 mb-2">Phone*</label>
+                        <input type="tel" id="phone" name="phone" required 
+                               class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-amber-500">
+                    </div>
+                    <div>
+                        <label for="date" class="block text-gray-700 mb-2">Wedding Date*</label>
+                        <input type="date" id="date" name="date" required 
+                               class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-amber-500">
+                    </div>
+                </div>
+
+                <!-- Package Selection -->
+                <div class="mb-6">
+                    <label for="package" class="block text-gray-700 mb-2">Package*</label>
+                    <select id="package" name="package" required 
+                            class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-amber-500">
+                        <option value="">Select a package</option>
+                        <option value="basic">Basic Coverage (6 hours)</option>
+                        <option value="standard">Standard Coverage (8 hours)</option>
+                        <option value="premium">Premium Coverage (Full day)</option>
+                    </select>
+                </div>
+
+                <!-- Special Requests -->
+                <div class="mb-6">
+                    <label for="message" class="block text-gray-700 mb-2">Special Requests</label>
+                    <textarea id="message" name="message" rows="4" 
+                              class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-amber-500"></textarea>
+                </div>
+
+                <!-- Submit Button -->
+                <button type="submit" class="w-full bg-amber-600 text-white py-3 px-6 rounded font-medium hover:bg-amber-700 transition">
+                    Submit Booking Request
+                </button>
+            </form>
+        </div>
+    </section>
+
+<!-- ==================== -->
+    <!-- Contact Us Section -->
+    <!-- ==================== -->
+     <section id="contact" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="font-wedding text-4xl md:text-5xl mb-4">Let's Create Magic Together</h2>
+                <p class="font-subtitle text-gray-600 max-w-2xl mx-auto">
+                    Share your vision and we'll craft your perfect photography experience
+                </p>
+            </div>
+            <div class="flex flex-col lg:flex-row gap-12">
+                <!-- Contact Form -->
+               <div class="lg:w-1/2">
+                    <form  name="contact" method="POST" data-netlify="true" class="bg-white p-8 rounded-xl shadow-md">
+                      <!-- Hidden Honeypot Field for Netlify -->
+                        <input type="hidden" name="form-name" value="contact" />
+                      
+                        <div class="mb-6">
+                            <label for="contact-name" class="block text-gray-700 mb-2">Your Name*</label>
+                            <input type="text" id="contact-name" name="name" required 
+                                   class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-amber-500">
+                        </div>
+                        <div class="mb-6">
+                            <label for="contact-email" class="block text-gray-700 mb-2">Email*</label>
+                            <input type="email" id="contact-email" name="email" required 
+                                   class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-amber-500">
+                        </div>
+                        <div class="mb-6">
+                            <label for="contact-subject" class="block text-gray-700 mb-2">Subject</label>
+                            <input type="text" id="contact-subject" name="subject"
+                                   class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-amber-500">
+                        </div>
+                        <div class="mb-6">
+                            <label for="contact-message" class="block text-gray-700 mb-2">Message*</label>
+                            <textarea id="contact-message" rows="5" name="message" required 
+                                      class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-amber-500"></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-amber-600 text-white py-3 px-6 rounded font-medium hover:bg-amber-700 transition">
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+
+
+                <!-- Contact Info -->
+                <div class="lg:w-1/2">
+                    <div class="bg-white p-8 rounded-xl shadow-md h-full">
+                        <h3 class="font-subtitle text-2xl mb-6 border-b border-amber-100 pb-4">Our Contact Information</h3>
+                        
+                        <div class="space-y-6">
+                            <!-- Phone -->
+                            <div class="flex items-start">
+                                <div class="bg-amber-50 p-3 rounded-full mr-4">
+                                    <i class="fas fa-phone text-amber-600"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-medium text-gray-800">Phone</h4>
+                                    <a href="tel:7020813427" class="text-gray-600 hover:text-amber-600 transition">+91 7020813427</a>
+                                    <p class="text-sm text-gray-500 mt-1">Mon-Fri: 9am-6pm | Sat: 10am-4pm</p>
+                                </div>
+                            </div>
+                            
+                            <!-- Email -->
+                            <div class="flex items-start">
+                                <div class="bg-amber-50 p-3 rounded-full mr-4">
+                                    <i class="fas fa-envelope text-amber-600"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-medium text-gray-800">Email</h4>
+                                    <a href="mailto:info@eternalweddings.com" class="text-gray-600 hover:text-amber-600 transition">info@eternalweddings.com</a>
+                                    <p class="text-sm text-gray-500 mt-1">Response within 24 hours</p>
+                                </div>
+                            </div>
+                            
+                            <!-- Address -->
+                            <div class="flex items-start">
+                                <div class="bg-amber-50 p-3 rounded-full mr-4">
+                                    <i class="fas fa-map-marker-alt text-amber-600"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-medium text-gray-800">Studio Address</h4>
+                                    <p class="text-gray-600">123 Wedding Lane, Suite 100<br>Nashik, 422101</p>
+                                   
+                                    </a>
+                                </div>
+                            </div>
+                            
+                            <!-- Call to Action -->
+                            <div class="mt-8 pt-6 border-t border-gray-100">
+                                <h4 class="font-medium text-gray-800 mb-4">Ready to book your session?</h4>
+                                <a href="tel:7020813427" class="inline-block bg-amber-600 text-white px-6 py-3 rounded-full font-medium hover:bg-amber-700 transition">
+                                    <i class="fas fa-phone mr-2"></i> Call Now: 702-081-3427
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+        <!-- ==================== -->
+    <!-- Footer Section -->
+    <!-- ==================== -->
+    <footer class="bg-gray-800 text-gray-300 py-16">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12">
+                <div>
+                    <h3 class="font-wedding text-white text-3xl mb-4">Eternal Vows</h3>
+                    <p class="mb-6">Preserving the poetry of your love story since 2012</p>
+                    <div class="flex space-x-4 mb-6">
+                        <a href="#" class="hover:text-amber-400 transition text-xl"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="hover:text-amber-400 transition text-xl"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="hover:text-amber-400 transition text-xl"><i class="fab fa-pinterest"></i></a>
+                        <a href="#" class="hover:text-amber-400 transition text-xl"><i class="fab fa-youtube"></i></a>
+                    </div>
+                    <div class="flex items-center mb-2">
+                        <i class="fas fa-envelope mr-3 text-amber-400"></i>
+                        <span>contact@eternalweddings.com</span>
+                    </div>
+                    <div class="flex items-center">
+                        <i class="fas fa-phone-alt mr-3 text-amber-400"></i>
+                        <span>+1 (555) 123-4567</span>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="font-subtitle text-white text-xl mb-4 border-b border-amber-500 pb-2 inline-block">Quick Links</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#home" class="hover:text-amber-400 transition">Home</a></li>
+                        <li><a href="#gallery" class="hover:text-amber-400 transition">Gallery</a></li>
+                        <li><a href="#films" class="hover:text-amber-400 transition">Wedding Films</a></li>
+                        <li><a href="#pricing" class="hover:text-amber-400 transition">Packages</a></li>
+                        <li><a href="#booking" class="hover:text-amber-400 transition">Book a Session</a></li>
+                        <li><a href="#process" class="hover:text-amber-400 transition">Our Process</a></li>
+                    </ul>
+                </div>
+
+                <!-- Services -->
+                <div>
+                    <h4 class="font-subtitle text-white text-xl mb-4 border-b border-amber-500 pb-2 inline-block">Our Services</h4>
+                    <ul class="space-y-3">
+                        <li class="flex items-start">
+                            <i class="fas fa-camera text-amber-400 mt-1 mr-2 text-sm"></i>
+                            <span>Wedding Photography</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-video text-amber-400 mt-1 mr-2 text-sm"></i>
+                            <span>Wedding Videography</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-ring text-amber-400 mt-1 mr-2 text-sm"></i>
+                            <span>Engagement Sessions</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-baby text-amber-400 mt-1 mr-2 text-sm"></i>
+                            <span>Maternity Sessions</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-book text-amber-400 mt-1 mr-2 text-sm"></i>
+                            <span>Custom Wedding Albums</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Newsletter -->
+                <div>
+                   
+                    <div class="mt-6">
+                        <h5 class="font-medium mb-2">Business Hours</h5>
+                        <p class="text-sm">Monday - Friday: 9am - 6pm</p>
+                        <p class="text-sm">Saturday: 10am - 4pm</p>
+                        <p class="text-sm">Sunday: Closed</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Copyright & Legal -->
+            <div class="border-t border-gray-700 mt-12 pt-8">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <p>&copy; <script>document.write(new Date().getFullYear())</script> Eternal Weddings. All rights reserved.</p>
+                    <div class="flex space-x-6 mt-4 md:mt-0">
+                        <a href="#" class="hover:text-amber-400 transition text-sm">Privacy Policy</a>
+                        <a href="#" class="hover:text-amber-400 transition text-sm">Terms of Service</a>
+                        <a href="#" class="hover:text-amber-400 transition text-sm">FAQ</a>
+                    </div>
+                </div>
+                <p class="text-center mt-4 text-sm text-gray-500">
+                    Based in Nashik | Serving Tri-State Area & Destination Weddings
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery-js/1.4.0/js/lightgallery.min.js"></script>
+<script>
+  lightGallery(document.querySelector('#gallery .grid'), {
+     selector: 'a',  // Ensures only <a> elements trigger Lightbox
+    controls: true, // Keeps navigation buttons (next/prev)
+    download: false, // Removes only the download button
+    mode: 'lg-fade',
+    mobileSettings: {
+      controls: true,
+      showCloseIcon: true
+    }
+  });
+
+</script>
+    
+    <!-- ==================== -->
+    <!-- JavaScript -->
+    <!-- ==================== -->
+    <script>
+        /**
+         * DOM Ready Handler
+         */
+        document.addEventListener('DOMContentLoaded', function() {
+            // ===== Mobile Menu Toggle =====
+            document.getElementById('menu-toggle').addEventListener('click', function() {
+                document.getElementById('mobile-menu').classList.toggle('hidden');
+            });
+
+           ``
+        
+        // Initialize when DOM is loaded
+        document.addEventListener('DOMContentLoaded', () => {
+            new ImageModal();
+            
+            // Initialize other components (mobile menu, etc.)
+            document.getElementById('menu-toggle').addEventListener('click', function() {
+                document.getElementById('mobile-menu').classList.toggle('hidden');
+            });
+            
+            // Smooth scrolling for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth'
+                        });
+                        document.getElementById('mobile-menu').classList.add('hidden');
+                    }
+                });
+            });
+        });
+            
+            // ===== Booking Form Submission =====
+            document.getElementById('booking-form').addEventListener('submit', function(e) {
+                e.preventDefault();
+                alert('Thank you for your booking request! We will contact you shortly to confirm your date.');
+                this.reset();
+            });
+            
+            // ===== Smooth Scrolling for Anchor Links =====
+            document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth'
+                        });
+                        // Close mobile menu if open
+                        document.getElementById('mobile-menu').classList.add('hidden');
+                    }
+                });
+            });
+            
+            // ===== YouTube Background Video =====
+            loadYouTubeBackground();
+            
+            // ===== YouTube Video Embed Fixes =====
+            fixYouTubeEmbeds();
+        });
+
+        /**
+         * Loads the YouTube background video player
+         */
+        function loadYouTubeBackground() {
+        const tag = document.createElement('script');
+        tag.src = "https://www.youtube.com/iframe_api";
+        const firstScriptTag = document.getElementsByTagName('script')[0];
+        firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+        
+        window.onYouTubeIframeAPIReady = function() {
+            new YT.Player('yt-background', {
+                videoId: 'Kni0Nd76X5A',
+                playerVars: {
+                    autoplay: 1,
+                    controls: 0,
+                    disablekb: 1,
+                    fs: 0,
+                    loop: 1,
+                    modestbranding: 1,
+                    mute: 1,
+                    playlist: 'Kni0Nd76X5A',
+                    rel: 0,
+                    // Additional parameters for fullscreen behavior
+                    vq: 'hd1080', // Highest quality
+                    enablejsapi: 1
+                },
+                events: {
+                    onReady: function(event) {
+                        event.target.playVideo();
+                        // Adjust for different aspect ratios
+                        resizeVideo();
+                        window.addEventListener('resize', resizeVideo);
+                    }
+                }
+            });
+        };
+        
+        function resizeVideo() {
+            const iframe = document.querySelector('#yt-background iframe');
+            if (iframe) {
+                const windowRatio = window.innerWidth / window.innerHeight;
+                const videoRatio = 16 / 9;
+                
+                if (windowRatio > videoRatio) {
+                    // Window is wider than video aspect ratio
+                    iframe.style.width = '100vw';
+                    iframe.style.height = '56.25vw'; // 16:9 aspect ratio
+                } else {
+                    // Window is taller than video aspect ratio
+                    iframe.style.height = '100vh';
+                    iframe.style.width = '177.78vh'; // 16:9 aspect ratio
+                }
+            }
+        }
+    }
+    
+    // Load YouTube background
+    loadYouTubeBackground();
+
+        /**
+         * Fixes YouTube embed iframes by adding origin parameter
+         */
+        function fixYouTubeEmbeds() {
+            const iframes = document.querySelectorAll('iframe[src*="youtube.com"]');
+            
+            iframes.forEach(function(iframe) {
+                const src = new URL(iframe.src);
+                if (!src.searchParams.has('origin')) {
+                    src.searchParams.set('origin', window.location.origin);
+                    iframe.src = src.toString();
+                }
+            });
+        }
+    </script>
+</body>
+</html>
