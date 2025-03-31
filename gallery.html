@@ -5,23 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gallery - Captured Moments</title>
     <script src="https://cdn.tailwindcss.com"></script>
-     <!-- Font Preload -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     
     <!-- CSS Resources -->
-    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery-js/1.4.0/css/lightgallery.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Cormorant+Garamond:wght@400;700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
-    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery-js/1.4.0/js/lightgallery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery-js/1.4.0/js/lg-thumbnail.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery-js/1.4.0/js/lg-fullscreen.min.js"></script>
 
     <style type="text/css">
-     body {
+        body {
             font-family: 'Montserrat', sans-serif;
             scroll-behavior: smooth;
         }
-        
+
         /* ===== Typography ===== */
         .font-wedding {
             font-family: 'Alex Brush', cursive;
@@ -29,9 +28,7 @@
         .font-subtitle {
             font-family: 'Cormorant Garamond', serif;
         }
-        
-</style>
-    
+    </style>
 </head>
 <body class="bg-gray-100 text-gray-900">
 
@@ -79,16 +76,33 @@
     <section class="container mx-auto px-4 py-12">
         <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4" id="lightgallery">
             <!-- Image List (Replace with Your Actual Images) -->
-            <img src="https://cdn.pixabay.com/photo/2021/08/11/17/03/bride-6538982_1280.jpg" class="w-full h-auto rounded-lg shadow-md cursor-pointer">
-            <img src="https://cdn.pixabay.com/photo/2020/08/14/21/11/bride-5489099_960_720.jpg" class="w-full h-auto rounded-lg shadow-md cursor-pointer">
-            <img src="https://cdn.pixabay.com/photo/2021/07/06/14/24/bride-6391756_960_720.jpg" class="w-full h-auto rounded-lg shadow-md cursor-pointer">
-            <img src="https://cdn.pixabay.com/photo/2020/09/11/10/21/wedding-photography-5562735_960_720.jpg" class="w-full h-auto rounded-lg shadow-md cursor-pointer">
-            <img src="https://cdn.pixabay.com/photo/2014/09/13/04/59/couple-443600_960_720.jpg" class="w-full h-auto rounded-lg shadow-md cursor-pointer">
-            <img src="https://cdn.pixabay.com/photo/2021/08/03/21/28/bride-6520554_1280.jpg" class="w-full h-auto rounded-lg shadow-md cursor-pointer">
-            <img src="https://cdn.pixabay.com/photo/2016/03/14/14/21/bride-1255520_1280.jpg" class="w-full h-auto rounded-lg shadow-md cursor-pointer">
-            <img src="https://cdn.pixabay.com/photo/2023/08/08/09/21/couple-8176869_1280.jpg" class="w-full h-auto rounded-lg shadow-md cursor-pointer">
-            <img src="https://cdn.pixabay.com/photo/2017/08/01/15/23/bride-2566244_960_720.jpg" class="w-full h-auto rounded-lg shadow-md cursor-pointer">
-            
+            <a href="https://cdn.pixabay.com/photo/2021/08/11/17/03/bride-6538982_1280.jpg" data-lg-size="1200-800">
+                <img src="https://cdn.pixabay.com/photo/2021/08/11/17/03/bride-6538982_1280.jpg" class="w-full h-auto rounded-lg shadow-md cursor-pointer">
+            </a>
+            <a href="https://cdn.pixabay.com/photo/2020/08/14/21/11/bride-5489099_960_720.jpg" data-lg-size="1200-800">
+                <img src="https://cdn.pixabay.com/photo/2020/08/14/21/11/bride-5489099_960_720.jpg" class="w-full h-auto rounded-lg shadow-md cursor-pointer">
+            </a>
+            <a href="https://cdn.pixabay.com/photo/2021/07/06/14/24/bride-6391756_960_720.jpg" data-lg-size="1200-800">
+                <img src="https://cdn.pixabay.com/photo/2021/07/06/14/24/bride-6391756_960_720.jpg" class="w-full h-auto rounded-lg shadow-md cursor-pointer">
+            </a>
+            <a href="https://cdn.pixabay.com/photo/2020/09/11/10/21/wedding-photography-5562735_960_720.jpg" data-lg-size="1200-800">
+                <img src="https://cdn.pixabay.com/photo/2020/09/11/10/21/wedding-photography-5562735_960_720.jpg" class="w-full h-auto rounded-lg shadow-md cursor-pointer">
+            </a>
+            <a href="https://cdn.pixabay.com/photo/2014/09/13/04/59/couple-443600_960_720.jpg" data-lg-size="1200-800">
+                <img src="https://cdn.pixabay.com/photo/2014/09/13/04/59/couple-443600_960_720.jpg" class="w-full h-auto rounded-lg shadow-md cursor-pointer">
+            </a>
+            <a href="https://cdn.pixabay.com/photo/2021/08/03/21/28/bride-6520554_1280.jpg" data-lg-size="1200-800">
+                <img src="https://cdn.pixabay.com/photo/2021/08/03/21/28/bride-6520554_1280.jpg" class="w-full h-auto rounded-lg shadow-md cursor-pointer">
+            </a>
+            <a href="https://cdn.pixabay.com/photo/2016/03/14/14/21/bride-1255520_1280.jpg" data-lg-size="1200-800">
+                <img src="https://cdn.pixabay.com/photo/2016/03/14/14/21/bride-1255520_1280.jpg" class="w-full h-auto rounded-lg shadow-md cursor-pointer">
+            </a>
+            <a href="https://cdn.pixabay.com/photo/2023/08/08/09/21/couple-8176869_1280.jpg" data-lg-size="1200-800">
+                <img src="https://cdn.pixabay.com/photo/2023/08/08/09/21/couple-8176869_1280.jpg" class="w-full h-auto rounded-lg shadow-md cursor-pointer">
+            </a>
+            <a href="https://cdn.pixabay.com/photo/2017/08/01/15/23/bride-2566244_960_720.jpg" data-lg-size="1200-800">
+                <img src="https://cdn.pixabay.com/photo/2017/08/01/15/23/bride-2566244_960_720.jpg" class="w-full h-auto rounded-lg shadow-md cursor-pointer">
+            </a>
         </div>
     </section>
 
@@ -183,12 +197,11 @@
             </div>
         </div>
     </footer>
-
-    <script type="text/javascript">
+<script type="text/javascript">
         // Initialize LightGallery
         lightGallery(document.getElementById('lightgallery'), {
             thumbnail: true,
-            
+            selector: 'a',
             share: false,
             download: false
         });
