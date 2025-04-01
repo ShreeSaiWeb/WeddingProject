@@ -1,0 +1,35 @@
+import React from "react";
+import { Card, CardContent } from "@/components/ui/card";
+
+const videos = [
+  "https://www.youtube.com/embed/xQBmpL5MibU?si=s56np19iFSPFkGDK",
+  "https://www.youtube.com/embed/jFdNgzRJi4s?si=61q8cEZO2P5yX_rc",
+  "https://www.youtube.com/embed/Bv4ZG38byWQ?si=JNg3kgtGVHOg-6C2",
+  "https://www.youtube.com/embed/Al2BZcKOvO0?si=3GTDGxvyI4HnuAxL",
+  "https://www.youtube.com/embed/aOxfcgo8YuE?si=KHbOor03MNHsX9y1",
+];
+
+const Films = () => {
+  return (
+    <div className="min-h-screen bg-gray-900 text-white p-6">
+      <h1 className="text-4xl font-bold text-center mb-4">A cinematic journey through our lens...</h1>
+      <div className="grid grid-cols-1 gap-6 max-w-4xl mx-auto">
+        {videos.map((video, index) => (
+          <Card key={index} className="overflow-hidden rounded-2xl shadow-lg">
+            <CardContent className="p-0">
+              <iframe
+                className="w-full aspect-video"
+                src={video}
+                title={`Film ${index + 1}`}
+                frameBorder="0"
+                allowFullScreen
+              ></iframe>
+            </CardContent>
+          </Card>
+        ))}
+      </div>
+    </div>
+  );
+};
+
+export default Films;
