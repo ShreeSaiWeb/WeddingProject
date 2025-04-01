@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Cormorant+Garamond:wght@400;700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+        }
+        .font-wedding {
+            font-family: 'Alex Brush', cursive;
+        }
+        .font-subtitle {
+            font-family: 'Cormorant Garamond', serif;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-900">
+    <!-- Contact Form Section -->
+    <section class="max-w-4xl mx-auto px-6 py-12">
+        <h1 class="text-4xl font-wedding text-center">Get in Touch</h1>
+        <p class="text-lg text-center font-subtitle text-gray-600 mt-2">We'd love to capture your special moments</p>
+        <form class="mt-8 bg-white p-6 rounded-lg shadow-md">
+            <div class="mb-4">
+                <label class="block text-gray-700 font-semibold" for="name">Name</label>
+                <input type="text" id="name" class="w-full mt-2 p-3 border rounded" required>
+            </div>
+            <div class="mb-4">
+                <label class="block text-gray-700 font-semibold" for="email">Email</label>
+                <input type="email" id="email" class="w-full mt-2 p-3 border rounded" required>
+            </div>
+            <div class="mb-4">
+                <label class="block text-gray-700 font-semibold" for="phone">Number</label>
+                <input type="tel" id="phone" class="w-full mt-2 p-3 border rounded" required>
+            </div>
+            <div class="mb-4">
+                <label class="block text-gray-700 font-semibold" for="message">Message</label>
+                <textarea id="message" class="w-full mt-2 p-3 border rounded" rows="4" required></textarea>
+            </div>
+            <button type="submit" class="w-full bg-amber-600 text-white py-3 rounded-lg hover:bg-amber-700 transition">Send Message</button>
+        </form>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="max-w-4xl mx-auto px-6 py-12">
+        <h2 class="text-3xl font-wedding text-center">Frequently Asked Questions</h2>
+        <div class="mt-6 space-y-4">
+            <div class="bg-white p-4 rounded-lg shadow">
+                <h3 class="font-subtitle text-lg font-semibold">1. What is included in your wedding photography package?</h3>
+                <p class="text-gray-600 mt-2">Our packages include pre-wedding shoots, full-day coverage, and beautifully edited photos.</p>
+            </div>
+            <div class="bg-white p-4 rounded
