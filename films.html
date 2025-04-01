@@ -1,35 +1,92 @@
-import React from "react";
-import { Card, CardContent } from "@/components/ui/card";
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Our Story</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+     <!-- Font Preload -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- CSS Resources -->
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery-js/1.4.0/css/lightgallery.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Cormorant+Garamond:wght@400;700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+   
+    
+</head>
+<style type="text/css">
+     body {
+            font-family: 'Montserrat', sans-serif;
+            scroll-behavior: smooth;
+        }
+        
+        /* ===== Typography ===== */
+        .font-wedding {
+            font-family: 'Alex Brush', cursive;
+        }
+        .font-subtitle {
+            font-family: 'Cormorant Garamond', serif;
+        }
+        
 
-const videos = [
-  "https://www.youtube.com/embed/xQBmpL5MibU?si=s56np19iFSPFkGDK",
-  "https://www.youtube.com/embed/jFdNgzRJi4s?si=61q8cEZO2P5yX_rc",
-  "https://www.youtube.com/embed/Bv4ZG38byWQ?si=JNg3kgtGVHOg-6C2",
-  "https://www.youtube.com/embed/Al2BZcKOvO0?si=3GTDGxvyI4HnuAxL",
-  "https://www.youtube.com/embed/aOxfcgo8YuE?si=KHbOor03MNHsX9y1",
-];
+</style>
+<body>
+    <header>
+         <nav class="fixed w-full bg-white shadow-sm z-50">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <a href="index.html" class="text-3xl font-wedding text-gray-800">Eternal Vows</a>
+                <div class="hidden md:flex space-x-8">
+                    <a href="index.html" class="hover:text-amber-600 transition">Home</a>
+                    <a href="about.html" class="hover:text-amber-600 transition">About Us</a>
+                    <a href="gallery.html" class="hover:text-amber-600 transition">Gallery</a>
+                    <a href="films.html" class="hover:text-amber-600 transition">Films</a>
+                    <a href="#pricing" class="hover:text-amber-600 transition">Collections</a>
+                    <a href="contact.html" class="hover:text-amber-600 transition">Contact</a>
+                </div>
+                <button id="menu-toggle" class="md:hidden focus:outline-none">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+                <!-- Mobile Menu Toggle -->
+                <div id="mobile-menu" class="hidden md:hidden mt-4 space-y-2">
+                <a href="index.html" class="block py-2 hover:text-amber-600">Home</a>
+                <a href="about.html" class="block py-2 hover:text-amber-600">Our Story</a>
+                <a href="gallery.html" class="block py-2 hover:text-amber-600">Gallery</a>
+                <a href="#pricing" class="block py-2 hover:text-amber-600">Collections</a>
+                <a href="#contact" class="block py-2 hover:text-amber-600">Contact</a>
+            </div>
+        </div>
 
-const Films = () => {
-  return (
-    <div className="min-h-screen bg-gray-900 text-white p-6">
-      <h1 className="text-4xl font-bold text-center mb-4">A cinematic journey through our lens...</h1>
-      <div className="grid grid-cols-1 gap-6 max-w-4xl mx-auto">
-        {videos.map((video, index) => (
-          <Card key={index} className="overflow-hidden rounded-2xl shadow-lg">
-            <CardContent className="p-0">
-              <iframe
-                className="w-full aspect-video"
-                src={video}
-                title={`Film ${index + 1}`}
-                frameBorder="0"
-                allowFullScreen
-              ></iframe>
-            </CardContent>
-          </Card>
-        ))}
-      </div>
-    </div>
-  );
-};
-
-export default Films;
+    </nav>
+        <h1>Our Cinematic Journey</h1>
+        <p>A collection of our finest cinematic masterpieces.</p>
+    </header>
+    <main>
+        <section class="films-grid">
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/VIDEO_ID_1" allowfullscreen></iframe>
+            </div>
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/VIDEO_ID_2" allowfullscreen></iframe>
+            </div>
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/VIDEO_ID_3" allowfullscreen></iframe>
+            </div>
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/VIDEO_ID_4" allowfullscreen></iframe>
+            </div>
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/VIDEO_ID_5" allowfullscreen></iframe>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <!-- Include your existing Footer here -->
+    </footer>
+</body>
+</html>
