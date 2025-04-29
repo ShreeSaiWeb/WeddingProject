@@ -109,7 +109,6 @@
                 <a href="#home" class="block py-2 hover:text-amber-600">Home</a>
                 <a href="about.html" class="block py-2 hover:text-amber-600">Our Story</a>
                 <a href="gallery.html" class="block py-2 hover:text-amber-600">Gallery</a>
-                 <a href="films.html" class="block py-2 hover:text-amber-600">Films</a>
                 <a href="contact.html" class="block py-2 hover:text-amber-600">Contact</a>
             </div>
         </div>
@@ -119,37 +118,43 @@
     <!-- ==================== -->
     <!-- Hero Section -->
     <!-- ==================== -->
-<section id="home" class="relative w-full h-screen overflow-hidden bg-black">
-  <!-- Video Background (only on larger screens) -->
-  <div class="absolute top-0 left-0 w-full h-full z-0 hidden md:block">
-    <iframe
-      class="absolute top-1/2 left-1/2 w-[120%] h-[120%] transform -translate-x-1/2 -translate-y-1/2"
-      src="https://www.youtube.com/embed/Kni0Nd76X5A?autoplay=1&mute=1&controls=0&showinfo=0&modestbranding=1&loop=1&playlist=Kni0Nd76X5A&playsinline=1&rel=0"
-      frameborder="0"
-      allow="autoplay; fullscreen"
-      allowfullscreen
-    ></iframe>
+<section id="home" class="relative w-full h-screen overflow-hidden">
+  <!-- Background Container -->
+  <div class="absolute top-0 left-0 w-full h-full z-0">
+    <!-- Fallback Image (Shown on small screens) -->
+    <div class="block md:hidden w-full h-full bg-cover bg-center" style="background-image: url('your-fallback.jpg');"></div>
+
+    <!-- YouTube Video (Hidden on small screens) -->
+    <div class="hidden md:block absolute top-0 left-0 w-full h-full pointer-events-none">
+     <iframe
+  class="absolute top-1/2 left-1/2 w-[120%] h-[120%] transform -translate-x-1/2 -translate-y-1/2"
+  src="https://www.youtube.com/embed/Kni0Nd76X5A?autoplay=1&mute=1&controls=0&showinfo=0&modestbranding=1&loop=1&playlist=Kni0Nd76X5A&playsinline=1&rel=0"
+  frameborder="0"
+  allow="autoplay; fullscreen"
+  allowfullscreen
+></iframe>
+
+    </div>
   </div>
 
-  <!-- Fallback Background Image for Mobile -->
-  <div class="block md:hidden w-full h-full bg-cover bg-center" style="background-image: url('your-fallback.jpg');"></div>
-
-  <!-- Overlay -->
-  <div class="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-black/60 via-black/40 to-black/60 z-0"></div>
+  <!-- Themed Overlay -->
+  <div class="absolute top-0 left-0 w-full h-full bg-black bg-opacity-50 z-0"></div>
 
   <!-- Content -->
-  <div class="relative z-10 flex flex-col items-center justify-center h-full text-center px-4 sm:px-8">
-    <h1 class="text-4xl sm:text-5xl md:text-6xl font-wedding text-white drop-shadow-md leading-tight mb-4">
+  <div class="relative z-10 flex flex-col items-center justify-center h-full text-white text-center px-6">
+    <h1 class="text-5xl md:text-6xl font-wedding font-bold mb-6 leading-tight text-white">
       Timeless Memories, Perfectly Captured
     </h1>
-    <p class="text-lg sm:text-xl font-subtitle text-white/90 mb-8 max-w-2xl">
+    <p class="text-lg md:text-xl font-subtitle mb-8 text-white max-w-2xl">
       Cinematic Wedding Photography & Videography
     </p>
+
+    <!-- Call to Action Button -->
     <a
       href="tel:7020813427"
-      class="bg-rose-500 hover:bg-rose-600 text-white font-medium font-subtitle px-8 py-4 text-lg rounded-full shadow-lg transition"
+      class="bg-[#E63946] hover:bg-[#C92C3A] text-white py-4 px-10 rounded-full text-xl shadow-lg transition-all font-playfair"
     >
-      Book Your Date
+      Book Appointment
     </a>
   </div>
 </section>
