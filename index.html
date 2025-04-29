@@ -214,27 +214,38 @@
     <!-- ==================== -->
       <!-- Modern Gallery Section -->
 
-      <section id="gallery" class="py-10 bg-white">
-  <div class="container mx-auto px-4 text-center">
-    <h2 class="text-4xl font-wedding mb-6">Photo Gallery</h2>
-    <p class="text-lg font-subtitle mb-8">Capturing timeless moments.</p>
+     <section id="gallery" class="py-20 bg-gray-50">
+  <div class="container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+    <h2 class="text-5xl font-wedding text-gray-800 mb-4">Photo Gallery</h2>
+    <p class="text-lg font-subtitle text-gray-600 mb-10">Capturing timeless moments that tell your love story.</p>
 
-    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
-      <!-- Replace 'imageX.jpg' with actual image paths -->
-      <a href="	https://cdn.pixabay.com/photo/2025/04/01/18/14/couple-9507426_1280.jpg" class="group block overflow-hidden rounded-lg shadow-lg">
-        <img src="https://cdn.pixabay.com/photo/2025/04/01/18/14/couple-9507426_1280.jpg" class="w-full h-[250px] object-cover transition-transform duration-300 group-hover:scale-105">
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6" id="lightgallery">
+      <!-- Image 1 -->
+      <a href="https://cdn.pixabay.com/photo/2025/04/01/18/14/couple-9507426_1280.jpg" class="group relative overflow-hidden rounded-xl shadow-lg">
+        <img src="https://cdn.pixabay.com/photo/2025/04/01/18/14/couple-9507426_1280.jpg"
+             class="w-full h-60 object-cover transition-transform duration-300 group-hover:scale-105" />
+        <div class="absolute inset-0 bg-rose-500 bg-opacity-20 group-hover:bg-opacity-40 transition duration-300"></div>
       </a>
-      <a href="https://cdn.pixabay.com/photo/2025/04/01/18/14/couple-9507430_960_720.jpg" class="group block overflow-hidden rounded-lg shadow-lg">
-        <img src="https://cdn.pixabay.com/photo/2025/04/01/18/14/couple-9507430_960_720.jpg" class="w-full h-[250px] object-cover transition-transform duration-300 group-hover:scale-105">
-      </a>
-      <a href="https://cdn.pixabay.com/photo/2025/04/01/18/14/couple-9507435_960_720.jpg" class="group block overflow-hidden rounded-lg shadow-lg">
-        <img src="https://cdn.pixabay.com/photo/2025/04/01/18/14/couple-9507435_960_720.jpg" class="w-full h-[250px] object-cover transition-transform duration-300 group-hover:scale-105">
-      </a>
-      <!-- Repeat for 20 images -->
 
+      <!-- Image 2 -->
+      <a href="https://cdn.pixabay.com/photo/2025/04/01/18/14/couple-9507430_960_720.jpg" class="group relative overflow-hidden rounded-xl shadow-lg">
+        <img src="https://cdn.pixabay.com/photo/2025/04/01/18/14/couple-9507430_960_720.jpg"
+             class="w-full h-60 object-cover transition-transform duration-300 group-hover:scale-105" />
+        <div class="absolute inset-0 bg-rose-500 bg-opacity-20 group-hover:bg-opacity-40 transition duration-300"></div>
+      </a>
+
+      <!-- Image 3 -->
+      <a href="https://cdn.pixabay.com/photo/2025/04/01/18/14/couple-9507435_960_720.jpg" class="group relative overflow-hidden rounded-xl shadow-lg">
+        <img src="https://cdn.pixabay.com/photo/2025/04/01/18/14/couple-9507435_960_720.jpg"
+             class="w-full h-60 object-cover transition-transform duration-300 group-hover:scale-105" />
+        <div class="absolute inset-0 bg-rose-500 bg-opacity-20 group-hover:bg-opacity-40 transition duration-300"></div>
+      </a>
+
+      <!-- Add more images here in the same pattern... -->
     </div>
   </div>
 </section>
+
 
 
 
@@ -593,6 +604,11 @@
 
         <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery-js/1.4.0/js/lightgallery.min.js"></script>
 <script>
+    lightGallery(document.querySelector('#lightgallery'), {
+  selector: 'a',
+  download: false
+});
+    
   lightGallery(document.querySelector('#gallery .grid'), {
      selector: 'a',  // Ensures only <a> elements trigger Lightbox
     controls: true, // Keeps navigation buttons (next/prev)
